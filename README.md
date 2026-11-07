@@ -1,2 +1,2 @@
 # index.html
-It is my protfolio
+It is my portfolio

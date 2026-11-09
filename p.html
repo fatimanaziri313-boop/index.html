@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Animation Widgets</title>
+
+<style>
+
+/* Page Styling */
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+}
+
+.widget{
+    width:30%;
+    height:250px;
+    float:left;
+    margin:20px;
+    border:2px solid white;
+    position:relative;
+    overflow:hidden;
+}
+
+/* ========================= */
+/* 1️⃣ PACMAN ANIMATION */
+/* ========================= */
+
+.pacman{
+    width:0;
+    height:0;
+    border-top:50px solid yellow;
+    border-right:50px solid transparent;
+    border-bottom:50px solid yellow;
+    border-left:50px solid yellow;
+    border-radius:50%;
+    position:absolute;
+    top:70px;
+    left:0;
+    animation:movePacman 4s linear infinite;
+}
+
+@keyframes movePacman{
+    0%{ left:0; }
+    100%{ left:200px; }
+}
+
+/* ========================= */
+/* 2️⃣ BOUNCING BALL */
+/* ========================= */
+
+.ball{
+    width:40px;
+    height:40px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    left:100px;
+    animation:bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce{
+    0%{ top:0; }
+    100%{ top:200px; }
+}
+
+/* ========================= */
+/* 3️⃣ SPINNING SQUARE */
+/* ========================= */
+
+.square{
+    width:60px;
+    height:60px;
+    background:cyan;
+    position:absolute;
+    top:90px;
+    left:90px;
+    animation:spin 3s linear infinite;
+}
+
+@keyframes spin{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+
+/* ========================= */
+/* 4️⃣ PULSING CIRCLE */
+/* ========================= */
+
+.pulse{
+    width:60px;
+    height:60px;
+    background:lime;
+    border-radius:50%;
+    position:absolute;
+    top:90px;
+    left:90px;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{ transform:scale(1); }
+    50%{ transform:scale(1.5); }
+    100%{ transform:scale(1); }
+}
+
+/* ========================= */
+/* 5️⃣ SLIDING BAR */
+/* ========================= */
+
+.bar{
+    width:50px;
+    height:20px;
+    background:orange;
+    position:absolute;
+    top:110px;
+    animation:slide 3s infinite alternate;
+}
+
+@keyframes slide{
+    0%{ left:0; }
+    100%{ left:200px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<h2 align="center">CSS Animation Widgets Lab</h2>
+
+<div class="widget">
+    <div class="pacman"></div>
+</div>
+
+<div class="widget">
+    <div class="ball"></div>
+</div>
+
+<div class="widget">
+    <div class="square"></div>
+</div>
+
+<div class="widget">
+    <div class="pulse"></div>
+</div>
+
+<div class="widget">
+    <div class="bar"></div>
+</div>
+
+</body>
+</html>
